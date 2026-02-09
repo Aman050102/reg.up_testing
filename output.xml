@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.9 on darwin)" generated="2026-02-09T16:06:59.524923" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="/Users/mac/Documents/GitHub/testing_Q2/login_tests">
+<suite id="s1-s1" name="Valid Login" source="/Users/mac/Documents/GitHub/testing_Q2/login_tests/valid_login.robot">
+<test id="s1-s1-t1" name="Valid Login Scenario" line="5">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-09T16:07:00.053052" level="INFO">Opening browser 'chrome' to base url 'https://reg.up.ac.th/'.</msg>
+<msg time="2026-02-09T16:07:00.916474" level="WARN">The chromedriver version (143.0.7499.169) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (144.0.7559.133); currently, chromedriver 144.0.7559.133 is recommended for chrome 144.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-09T16:07:00.052650" elapsed="6.569534"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-09T16:07:06.625645" elapsed="0.443055"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-02-09T16:07:07.069106" elapsed="0.002904"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T16:07:07.073178" level="INFO">Clicking button 'xpath:/html/body/header/div[1]/div[2]/div[3]/div/button'.</msg>
+<arg>xpath:/html/body/header/div[1]/div[2]/div[3]/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T16:07:07.072287" elapsed="0.131373"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-09T16:07:10.207739" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-09T16:07:07.204538" elapsed="3.003733"/>
+</kw>
+<status status="PASS" start="2026-02-09T16:07:00.051612" elapsed="10.156946"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="current"]/div/div[2]/a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T16:07:10.210011" elapsed="0.020323"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-09T16:07:10.231136" level="INFO">Clicking element 'xpath://*[@id="current"]/div/div[2]/a'.</msg>
+<arg>xpath://*[@id="current"]/div/div[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T16:07:10.230871" elapsed="0.896654"/>
+</kw>
+<status status="PASS" start="2026-02-09T16:07:10.209580" elapsed="0.918146"/>
+</kw>
+<kw name="Input Username" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T16:07:11.128599" elapsed="1.114836"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T16:07:12.243599" elapsed="0.016206"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T16:07:12.260469" level="INFO">Typing text '67023086@up.ac.th' into text field 'id:i0116'.</msg>
+<arg>id:i0116</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T16:07:12.260209" elapsed="0.357176"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T16:07:12.618017" level="INFO">Clicking button 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T16:07:12.617713" elapsed="0.076081"/>
+</kw>
+<arg>${VALID USER}</arg>
+<status status="PASS" start="2026-02-09T16:07:11.128134" elapsed="1.565772"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T16:07:12.694414" elapsed="0.669205"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T16:07:13.363786" elapsed="0.013231"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T16:07:13.377398" level="INFO">Typing text 'Aman0945785806*' into text field 'id:i0118'.</msg>
+<arg>id:i0118</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T16:07:13.377173" elapsed="0.050722"/>
+</kw>
+<arg>${VALID PASSWORD}</arg>
+<status status="PASS" start="2026-02-09T16:07:12.694133" elapsed="0.733857"/>
+</kw>
+<kw name="Submit Email" owner="resource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T16:07:13.428518" level="INFO">Clicking button 'xpath://*[@id="idSIButton9"]'.</msg>
+<arg>xpath://*[@id="idSIButton9"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T16:07:13.428372" elapsed="0.337474"/>
+</kw>
+<kw name="Pause Execution" owner="Dialogs">
+<arg>กรุณายืนยันตัวตนในมือถือ (MFA) ให้เรียบร้อยแล้วกด OK</arg>
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" start="2026-02-09T16:07:13.766043" elapsed="21.833561"/>
+</kw>
+<status status="PASS" start="2026-02-09T16:07:13.428173" elapsed="22.172298"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="resource">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>${SERVER}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-02-09T16:07:35.602470" elapsed="1.933185"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-09T16:07:38.537778" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-09T16:07:37.535837" elapsed="1.002457"/>
+</kw>
+<status status="PASS" start="2026-02-09T16:07:35.601738" elapsed="2.936887"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-09T16:07:38.539544" elapsed="0.139693"/>
+</kw>
+<status status="PASS" start="2026-02-09T16:07:00.050343" elapsed="38.629028"/>
+</test>
+<status status="PASS" start="2026-02-09T16:06:59.597897" elapsed="39.081991"/>
+</suite>
+<status status="PASS" start="2026-02-09T16:06:59.529036" elapsed="39.151281"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="1" fail="0" skip="0">Login Tests</stat>
+<stat name="Valid Login" id="s1-s1" pass="1" fail="0" skip="0">Login Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-09T16:07:00.916474" level="WARN">The chromedriver version (143.0.7499.169) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (144.0.7559.133); currently, chromedriver 144.0.7559.133 is recommended for chrome 144.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
