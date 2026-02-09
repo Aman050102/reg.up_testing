@@ -1,158 +1,661 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.9 on darwin)" generated="2026-02-09T16:06:59.524923" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.9 on darwin)" generated="2026-02-09T20:41:04.512653" rpa="false" schemaversion="5">
 <suite id="s1" name="Login Tests" source="/Users/mac/Documents/GitHub/testing_Q2/login_tests">
-<suite id="s1-s1" name="Valid Login" source="/Users/mac/Documents/GitHub/testing_Q2/login_tests/valid_login.robot">
-<test id="s1-s1-t1" name="Valid Login Scenario" line="5">
-<kw name="Open Browser To Login Page" owner="resource">
+<suite id="s1-s1" name="Invalid Login" source="/Users/mac/Documents/GitHub/testing_Q2/login_tests/invalid_login.robot">
+<kw name="Open Browser To Login Page" owner="resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-09T16:07:00.053052" level="INFO">Opening browser 'chrome' to base url 'https://reg.up.ac.th/'.</msg>
-<msg time="2026-02-09T16:07:00.916474" level="WARN">The chromedriver version (143.0.7499.169) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (144.0.7559.133); currently, chromedriver 144.0.7559.133 is recommended for chrome 144.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2026-02-09T20:41:04.762839" level="INFO">Opening browser 'chrome' to base url 'https://reg.up.ac.th/'.</msg>
 <arg>${WELCOME URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-09T16:07:00.052650" elapsed="6.569534"/>
+<status status="PASS" start="2026-02-09T20:41:04.762445" elapsed="3.113102"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-09T16:07:06.625645" elapsed="0.443055"/>
+<status status="PASS" start="2026-02-09T20:41:07.879007" elapsed="0.394502"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-02-09T16:07:07.069106" elapsed="0.002904"/>
+<status status="PASS" start="2026-02-09T20:41:08.273844" elapsed="0.005334"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-02-09T16:07:07.073178" level="INFO">Clicking button 'xpath:/html/body/header/div[1]/div[2]/div[3]/div/button'.</msg>
+<msg time="2026-02-09T20:41:08.281060" level="INFO">Clicking button 'xpath:/html/body/header/div[1]/div[2]/div[3]/div/button'.</msg>
 <arg>xpath:/html/body/header/div[1]/div[2]/div[3]/div/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-09T16:07:07.072287" elapsed="0.131373"/>
+<status status="PASS" start="2026-02-09T20:41:08.279482" elapsed="0.194726"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-09T16:07:10.207739" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-02-09T20:41:11.502410" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-09T16:07:07.204538" elapsed="3.003733"/>
+<status status="PASS" start="2026-02-09T20:41:08.477809" elapsed="3.024847"/>
 </kw>
-<status status="PASS" start="2026-02-09T16:07:00.051612" elapsed="10.156946"/>
+<status status="PASS" start="2026-02-09T20:41:04.761740" elapsed="6.741140"/>
+</kw>
+<test id="s1-s1-t1" name="Invalid Username" line="9">
+<kw name="Go To Login Page" owner="resource" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:11.504709" level="INFO">Opening url 'https://go.up.ac.th/rY7zwj'</msg>
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-09T20:41:11.504571" elapsed="1.390495"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:12.895429" elapsed="0.711350"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:11.504287" elapsed="2.102600"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<kw name="Input Username" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:13.611220" elapsed="0.009326"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T20:41:13.620702" elapsed="0.015662"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:13.636687" level="INFO">Typing text 'invalid@up.ac.th' into text field 'id:i0116'.</msg>
+<arg>id:i0116</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:13.636504" elapsed="0.231450"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:13.868282" level="INFO">Clicking button 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:13.868120" elapsed="0.069430"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-02-09T20:41:13.607412" elapsed="0.330235"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Input Password" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:25.099525" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-09T20:41:25.101453" level="FAIL">Element 'id:i0118' not visible after 10 seconds.</msg>
+<arg>id:i0118</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-09T20:41:13.938512" elapsed="11.169858">Element 'id:i0118' not visible after 10 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:25.108521" elapsed="0.000028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:25.108620" elapsed="0.000016"/>
+</kw>
+<arg>${password}</arg>
+<status status="FAIL" start="2026-02-09T20:41:13.938303" elapsed="11.170438">Element 'id:i0118' not visible after 10 seconds.</status>
+</kw>
+<arg>Input Password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-09T20:41:13.937793" elapsed="11.171004"/>
+</kw>
+<kw name="Login Should Have Failed" owner="resource">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.109422" elapsed="0.008405"/>
+</kw>
+<msg time="2026-02-09T20:41:25.117971" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.109159" elapsed="0.008837"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>รหัสผ่านไม่ถูกต้อง</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:25.119785" elapsed="0.000034"/>
+</kw>
+<status status="NOT RUN" start="2026-02-09T20:41:25.118117" elapsed="0.001743"/>
+</branch>
+<status status="PASS" start="2026-02-09T20:41:25.118082" elapsed="0.001815"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Detected login error as expected.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.119978" elapsed="0.000254"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:25.108969" elapsed="0.011320"/>
+</kw>
+<arg>invalid@up.ac.th</arg>
+<arg>${VALID PASSWORD}</arg>
+<status status="PASS" start="2026-02-09T20:41:13.607152" elapsed="11.513178"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:11.503059" elapsed="13.617418"/>
+</test>
+<test id="s1-s1-t2" name="Invalid Password" line="10">
+<kw name="Go To Login Page" owner="resource" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:25.121120" level="INFO">Opening url 'https://go.up.ac.th/rY7zwj'</msg>
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.121032" elapsed="0.329284"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.450857" elapsed="0.466294"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:25.120889" elapsed="0.796425"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<kw name="Input Username" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.918320" elapsed="0.011974"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.930471" elapsed="0.038772"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:25.969591" level="INFO">Typing text '67023086@up.ac.th' into text field 'id:i0116'.</msg>
+<arg>id:i0116</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:25.969391" elapsed="0.049423"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:26.019129" level="INFO">Clicking button 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:26.018973" elapsed="0.042042"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-02-09T20:41:25.918057" elapsed="0.143051"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Input Password" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:26.061749" elapsed="0.899501"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T20:41:26.961433" elapsed="0.014666"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:26.976465" level="INFO">Typing text 'invalid_pass' into text field 'id:i0118'.</msg>
+<arg>id:i0118</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:26.976257" elapsed="0.048010"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-02-09T20:41:26.061542" elapsed="0.962836"/>
+</kw>
+<arg>Input Password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-09T20:41:26.061242" elapsed="0.963181"/>
+</kw>
+<kw name="Login Should Have Failed" owner="resource">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.025075" elapsed="0.005122"/>
+</kw>
+<msg time="2026-02-09T20:41:27.030546" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.024832" elapsed="0.005866"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>รหัสผ่านไม่ถูกต้อง</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:27.031272" elapsed="0.000034"/>
+</kw>
+<status status="NOT RUN" start="2026-02-09T20:41:27.030896" elapsed="0.000455"/>
+</branch>
+<status status="PASS" start="2026-02-09T20:41:27.030842" elapsed="0.000550"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Detected login error as expected.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.031457" elapsed="0.000262"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:27.024622" elapsed="0.007152"/>
+</kw>
+<arg>${VALID USER}</arg>
+<arg>invalid_pass</arg>
+<status status="PASS" start="2026-02-09T20:41:25.917654" elapsed="1.114157"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:25.120654" elapsed="1.911305"/>
+</test>
+<test id="s1-s1-t3" name="Empty Username" line="11">
+<kw name="Go To Login Page" owner="resource" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:27.032704" level="INFO">Opening url 'https://go.up.ac.th/rY7zwj'</msg>
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.032615" elapsed="0.264282"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.297077" elapsed="0.466835"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:27.032472" elapsed="0.731577"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<kw name="Input Username" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.765766" elapsed="0.012114"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.778053" elapsed="0.014492"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:27.792901" level="INFO">Typing text '' into text field 'id:i0116'.</msg>
+<arg>id:i0116</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.792708" elapsed="0.068069"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:27.861071" level="INFO">Clicking button 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.860923" elapsed="0.041441"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-02-09T20:41:27.765501" elapsed="0.136954"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Input Password" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:39.037139" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-09T20:41:39.037406" level="FAIL">Element 'id:i0118' not visible after 10 seconds.</msg>
+<arg>id:i0118</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-09T20:41:27.903078" elapsed="11.135253">Element 'id:i0118' not visible after 10 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:39.038579" elapsed="0.000033"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:39.038686" elapsed="0.001771"/>
+</kw>
+<arg>${password}</arg>
+<status status="FAIL" start="2026-02-09T20:41:27.902866" elapsed="11.137691">Element 'id:i0118' not visible after 10 seconds.</status>
+</kw>
+<arg>Input Password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-09T20:41:27.902567" elapsed="11.138057"/>
+</kw>
+<kw name="Login Should Have Failed" owner="resource">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.041195" elapsed="0.005656"/>
+</kw>
+<msg time="2026-02-09T20:41:39.046966" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.040966" elapsed="0.006024"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>รหัสผ่านไม่ถูกต้อง</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:39.047260" elapsed="0.000021"/>
+</kw>
+<status status="NOT RUN" start="2026-02-09T20:41:39.047073" elapsed="0.000252"/>
+</branch>
+<status status="PASS" start="2026-02-09T20:41:39.047053" elapsed="0.000303"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Detected login error as expected.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.047415" elapsed="0.000211"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:39.040781" elapsed="0.006895"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>${VALID PASSWORD}</arg>
+<status status="PASS" start="2026-02-09T20:41:27.764323" elapsed="11.283387"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:27.032184" elapsed="12.015636"/>
+</test>
+<test id="s1-s1-t4" name="Empty Password" line="12">
+<kw name="Go To Login Page" owner="resource" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:39.048404" level="INFO">Opening url 'https://go.up.ac.th/rY7zwj'</msg>
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.048320" elapsed="0.280203"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.328669" elapsed="0.462677"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:39.048185" elapsed="0.743314"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<kw name="Input Username" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.792852" elapsed="0.013105"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.806142" elapsed="0.015889"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:39.822386" level="INFO">Typing text '67023086@up.ac.th' into text field 'id:i0116'.</msg>
+<arg>id:i0116</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.822188" elapsed="0.075516"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:39.898012" level="INFO">Clicking button 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.897859" elapsed="0.041640"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-02-09T20:41:39.792595" elapsed="0.146995"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Input Password" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.940248" elapsed="0.681045"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-02-09T20:41:40.621519" elapsed="0.018383"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:40.640282" level="INFO">Typing text '' into text field 'id:i0118'.</msg>
+<arg>id:i0118</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:40.640069" elapsed="0.036198"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-02-09T20:41:39.940041" elapsed="0.736319"/>
+</kw>
+<arg>Input Password</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-02-09T20:41:39.939707" elapsed="0.736695"/>
+</kw>
+<kw name="Login Should Have Failed" owner="resource">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-09T20:41:40.677001" elapsed="0.006458"/>
+</kw>
+<msg time="2026-02-09T20:41:40.683584" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-09T20:41:40.676767" elapsed="0.006841"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>รหัสผ่านไม่ถูกต้อง</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-02-09T20:41:40.683866" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2026-02-09T20:41:40.683689" elapsed="0.000228"/>
+</branch>
+<status status="PASS" start="2026-02-09T20:41:40.683667" elapsed="0.000277"/>
+</if>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Detected login error as expected.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-09T20:41:40.684001" elapsed="0.000219"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:40.676572" elapsed="0.007698"/>
+</kw>
+<arg>${VALID USER}</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2026-02-09T20:41:39.791804" elapsed="0.892502"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:39.047973" elapsed="1.636429"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-09T20:41:40.684819" elapsed="0.148646"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:04.539782" elapsed="36.293903"/>
+</suite>
+<suite id="s1-s2" name="Valid Login" source="/Users/mac/Documents/GitHub/testing_Q2/login_tests/valid_login.robot">
+<test id="s1-s2-t1" name="Valid Login Scenario" line="5">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:40.838139" level="INFO">Opening browser 'chrome' to base url 'https://reg.up.ac.th/'.</msg>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-09T20:41:40.837947" elapsed="2.711999"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-09T20:41:43.550868" elapsed="0.412503"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-02-09T20:41:43.963798" elapsed="0.000853"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-09T20:41:43.965078" level="INFO">Clicking button 'xpath:/html/body/header/div[1]/div[2]/div[3]/div/button'.</msg>
+<arg>xpath:/html/body/header/div[1]/div[2]/div[3]/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-09T20:41:43.964843" elapsed="1.988642"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-09T20:41:48.957633" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-09T20:41:45.953954" elapsed="3.004172"/>
+</kw>
+<status status="PASS" start="2026-02-09T20:41:40.837694" elapsed="8.121027"/>
 </kw>
 <kw name="Submit Credentials" owner="resource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath://*[@id="current"]/div/div[2]/a</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-09T16:07:10.210011" elapsed="0.020323"/>
+<status status="PASS" start="2026-02-09T20:41:48.961089" elapsed="0.031059"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-09T16:07:10.231136" level="INFO">Clicking element 'xpath://*[@id="current"]/div/div[2]/a'.</msg>
+<msg time="2026-02-09T20:41:48.992557" level="INFO">Clicking element 'xpath://*[@id="current"]/div/div[2]/a'.</msg>
 <arg>xpath://*[@id="current"]/div/div[2]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-09T16:07:10.230871" elapsed="0.896654"/>
+<status status="PASS" start="2026-02-09T20:41:48.992360" elapsed="0.405152"/>
 </kw>
-<status status="PASS" start="2026-02-09T16:07:10.209580" elapsed="0.918146"/>
+<status status="PASS" start="2026-02-09T20:41:48.960017" elapsed="0.437750"/>
 </kw>
 <kw name="Input Username" owner="resource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id:i0116</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-09T16:07:11.128599" elapsed="1.114836"/>
+<status status="PASS" start="2026-02-09T20:41:49.398902" elapsed="1.936832"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>id:i0116</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-02-09T16:07:12.243599" elapsed="0.016206"/>
+<status status="PASS" start="2026-02-09T20:41:51.335890" elapsed="0.014898"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-09T16:07:12.260469" level="INFO">Typing text '67023086@up.ac.th' into text field 'id:i0116'.</msg>
+<msg time="2026-02-09T20:41:51.351130" level="INFO">Typing text '67023086@up.ac.th' into text field 'id:i0116'.</msg>
 <arg>id:i0116</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-09T16:07:12.260209" elapsed="0.357176"/>
+<status status="PASS" start="2026-02-09T20:41:51.350934" elapsed="0.121457"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-02-09T16:07:12.618017" level="INFO">Clicking button 'id:idSIButton9'.</msg>
+<msg time="2026-02-09T20:41:51.472701" level="INFO">Clicking button 'id:idSIButton9'.</msg>
 <arg>id:idSIButton9</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-09T16:07:12.617713" elapsed="0.076081"/>
+<status status="PASS" start="2026-02-09T20:41:51.472545" elapsed="0.163945"/>
 </kw>
 <arg>${VALID USER}</arg>
-<status status="PASS" start="2026-02-09T16:07:11.128134" elapsed="1.565772"/>
+<status status="PASS" start="2026-02-09T20:41:49.398233" elapsed="2.238566"/>
 </kw>
 <kw name="Input Password" owner="resource">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id:i0118</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-09T16:07:12.694414" elapsed="0.669205"/>
+<status status="PASS" start="2026-02-09T20:41:51.637972" elapsed="0.685475"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>id:i0118</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-02-09T16:07:13.363786" elapsed="0.013231"/>
+<status status="PASS" start="2026-02-09T20:41:52.324221" elapsed="0.016272"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-09T16:07:13.377398" level="INFO">Typing text 'Aman0945785806*' into text field 'id:i0118'.</msg>
+<msg time="2026-02-09T20:41:52.340882" level="INFO">Typing text 'Aman0945785806*' into text field 'id:i0118'.</msg>
 <arg>id:i0118</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-09T16:07:13.377173" elapsed="0.050722"/>
+<status status="PASS" start="2026-02-09T20:41:52.340661" elapsed="0.041692"/>
 </kw>
 <arg>${VALID PASSWORD}</arg>
-<status status="PASS" start="2026-02-09T16:07:12.694133" elapsed="0.733857"/>
+<status status="PASS" start="2026-02-09T20:41:51.637186" elapsed="0.745260"/>
 </kw>
 <kw name="Submit Email" owner="resource">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-02-09T16:07:13.428518" level="INFO">Clicking button 'xpath://*[@id="idSIButton9"]'.</msg>
+<msg time="2026-02-09T20:41:52.382958" level="INFO">Clicking button 'xpath://*[@id="idSIButton9"]'.</msg>
 <arg>xpath://*[@id="idSIButton9"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-09T16:07:13.428372" elapsed="0.337474"/>
+<status status="PASS" start="2026-02-09T20:41:52.382826" elapsed="0.340734"/>
 </kw>
 <kw name="Pause Execution" owner="Dialogs">
 <arg>กรุณายืนยันตัวตนในมือถือ (MFA) ให้เรียบร้อยแล้วกด OK</arg>
 <doc>Pauses execution until user clicks ``Ok`` button.</doc>
-<status status="PASS" start="2026-02-09T16:07:13.766043" elapsed="21.833561"/>
+<status status="PASS" start="2026-02-09T20:41:52.723768" elapsed="18.966155"/>
 </kw>
-<status status="PASS" start="2026-02-09T16:07:13.428173" elapsed="22.172298"/>
+<status status="PASS" start="2026-02-09T20:41:52.382638" elapsed="19.308454"/>
 </kw>
 <kw name="Welcome Page Should Be Open" owner="resource">
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${SERVER}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2026-02-09T16:07:35.602470" elapsed="1.933185"/>
+<status status="PASS" start="2026-02-09T20:42:11.693137" elapsed="2.065593"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-09T16:07:38.537778" level="INFO">Slept 1 second.</msg>
+<msg time="2026-02-09T20:42:14.762334" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-09T16:07:37.535837" elapsed="1.002457"/>
+<status status="PASS" start="2026-02-09T20:42:13.758951" elapsed="1.003831"/>
 </kw>
-<status status="PASS" start="2026-02-09T16:07:35.601738" elapsed="2.936887"/>
+<status status="PASS" start="2026-02-09T20:42:11.692410" elapsed="3.070724"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-09T16:07:38.539544" elapsed="0.139693"/>
+<status status="PASS" start="2026-02-09T20:42:14.764333" elapsed="0.134852"/>
 </kw>
-<status status="PASS" start="2026-02-09T16:07:00.050343" elapsed="38.629028"/>
+<status status="PASS" start="2026-02-09T20:41:40.837299" elapsed="34.062018"/>
 </test>
-<status status="PASS" start="2026-02-09T16:06:59.597897" elapsed="39.081991"/>
+<status status="PASS" start="2026-02-09T20:41:40.834597" elapsed="34.065070"/>
 </suite>
-<status status="PASS" start="2026-02-09T16:06:59.529036" elapsed="39.151281"/>
+<status status="PASS" start="2026-02-09T20:41:04.513666" elapsed="70.386419"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login Tests" id="s1" pass="1" fail="0" skip="0">Login Tests</stat>
-<stat name="Valid Login" id="s1-s1" pass="1" fail="0" skip="0">Login Tests.Valid Login</stat>
+<stat name="Login Tests" id="s1" pass="5" fail="0" skip="0">Login Tests</stat>
+<stat name="Invalid Login" id="s1-s1" pass="4" fail="0" skip="0">Login Tests.Invalid Login</stat>
+<stat name="Valid Login" id="s1-s2" pass="1" fail="0" skip="0">Login Tests.Valid Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-02-09T16:07:00.916474" level="WARN">The chromedriver version (143.0.7499.169) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (144.0.7559.133); currently, chromedriver 144.0.7559.133 is recommended for chrome 144.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

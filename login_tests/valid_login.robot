@@ -7,6 +7,6 @@ Valid Login Scenario
     Submit Credentials
     Input Username          ${VALID USER}
     Input Password          ${VALID PASSWORD}
-    Submit Email                                 
+    Submit Email
     Welcome Page Should Be Open
     [Teardown]    Close Browser

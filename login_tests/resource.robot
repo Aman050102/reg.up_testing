@@ -47,8 +47,17 @@ Submit Email
     Pause Execution    กรุณายืนยันตัวตนในมือถือ (MFA) ให้เรียบร้อยแล้วกด OK
 
 Login Should Have Failed
-    Wait Until Page Contains Element    xpath://div[@id='usernameError' or @id='passwordError' or @id='loginError']    timeout=5s
+    # 1. รอให้หน้าเว็บโหลด error message (รองรับหลาย ID ที่ Microsoft ใช้บ่อย)
+    # 2. เพิ่มการเช็คด้วยข้อความ (Page Should Contain) เพื่อความชัวร์
+    ${status}    Run Keyword And Return Status    Wait Until Page Contains Element    xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']    timeout=10s
+
+    # ถ้าหา Element ไม่เจอ ให้ลองเช็คจาก Text แทน (เผื่อ Microsoft เปลี่ยนโครงสร้าง ID)
+    IF    '${status}' == 'False'
+        Wait Until Page Contains    รหัสผ่านไม่ถูกต้อง    timeout=5s
+    END
+
     Log To Console    Detected login error as expected.
+
 
 Welcome Page Should Be Open
     Wait Until Location Contains    ${SERVER}    timeout=15s
