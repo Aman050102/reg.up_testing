@@ -11,6 +11,8 @@ ${VALID PASSWORD}     Aman0945785806*
 ${WELCOME URL}        https://${SERVER}/
 ${LOGIN URL}          https://go.up.ac.th/rY7zwj
 ${ERROR URL}          https://go.up.ac.th/rY7zwj
+${MFA_TIMEOUT_ERROR}    ไม่ได้รับการติดต่อจากคุณทันเวลา
+${INVALID_PASS_ERROR}   รหัสผ่านไม่ถูกต้อง
 
 *** Keywords ***
 Open Browser To Login Page
@@ -41,24 +43,25 @@ Input Password
     Wait Until Element Is Visible    id:i0118    timeout=10s
     Wait Until Element Is Enabled    id:i0118    timeout=5s
     Input Text     id:i0118   ${password}
+    Sleep    1s
+    Execute Javascript    document.querySelector('#idSIButton9').click()
 
 Submit Email
-    Click Button    xpath://*[@id="idSIButton9"]
+    Sleep    3s
+    Wait Until Page Contains    อนุมัติ    timeout=20s
+    Run Keyword And Ignore Error    Execute Javascript    document.querySelector('#idSIButton9').click()
     Pause Execution    กรุณายืนยันตัวตนในมือถือ (MFA) ให้เรียบร้อยแล้วกด OK
 
 Login Should Have Failed
-    # 1. รอให้หน้าเว็บโหลด error message (รองรับหลาย ID ที่ Microsoft ใช้บ่อย)
-    # 2. เพิ่มการเช็คด้วยข้อความ (Page Should Contain) เพื่อความชัวร์
-    ${status}    Run Keyword And Return Status    Wait Until Page Contains Element    xpath://div[@id='usernameError' or @id='passwordError' or @id='error' or contains(@id, 'Error') or @role='alert']    timeout=10s
+    ${is_error}    Run Keyword And Return Status    Wait Until Page Contains Element    xpath://div[contains(@id, 'Error') or @role='alert']    timeout=10s
 
-    # ถ้าหา Element ไม่เจอ ให้ลองเช็คจาก Text แทน (เผื่อ Microsoft เปลี่ยนโครงสร้าง ID)
-    IF    '${status}' == 'False'
-        Wait Until Page Contains    รหัสผ่านไม่ถูกต้อง    timeout=5s
+    IF    ${is_error}
+        Log To Console    Detected system error message.
+    ELSE
+        Wait Until Page Contains    ไม่ถูกต้อง    timeout=5s
     END
-
     Log To Console    Detected login error as expected.
 
-
 Welcome Page Should Be Open
-    Wait Until Location Contains    ${SERVER}    timeout=15s
+    Wait Until Location Contains    ${WELCOME URL}    timeout=15s
     Sleep    1s
