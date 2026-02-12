@@ -17,7 +17,6 @@ MFA Confirmation Timeout
     [Template]    NONE
     Login With Correct Credentials But Wait For MFA Timeout    ${VALID USER}    ${VALID PASSWORD}
 
-
 *** Keywords ***
 Login With Invalid Credentials Should Fail
     [Arguments]    ${username}    ${password}
