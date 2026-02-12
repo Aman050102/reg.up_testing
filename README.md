@@ -27,5 +27,5 @@ This project leverages industry-standard tools for robust and scalable web autom
     * `SeleniumLibrary`: For browser orchestration and web element interaction.
     * `Dialogs`: To handle manual pause-and-resume for MFA mobile approval.
     * `Collections`: To manage complex data lists and grade mapping.
-* **Language:** Python 3.x
+* **Language:** Python 3.4
 * **Browser:** Google Chrome (controlled via ChromeDriver)
