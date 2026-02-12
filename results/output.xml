@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.9 on darwin)" generated="2026-02-12T22:19:35.697870" rpa="false" schemaversion="5">
+<suite id="s1" name="Gpa Test" source="/Users/mac/Documents/GitHub/testing_Q2/gpa_test.robot">
+<kw name="Login For GPA Testing" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:19:35.923004" level="INFO">Opening browser 'chrome' to base url 'https://reg.up.ac.th/'.</msg>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-12T22:19:35.922794" elapsed="3.771266"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-12T22:19:39.694921" elapsed="0.353820"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-02-12T22:19:40.048944" elapsed="0.000551"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_MAIN_MENU}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:19:40.049618" elapsed="0.027386"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:19:40.077389" level="INFO">Clicking element 'xpath://button[contains(@class, 'navbar-toggle')] | /html/body/header/div[1]/div[2]/div[3]/div/button'.</msg>
+<arg>${BTN_MAIN_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:19:40.077172" elapsed="0.058000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="current"]/div/div[2]/a</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:19:40.135340" elapsed="0.023141"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:19:40.158993" level="INFO">Clicking element 'xpath://*[@id="current"]/div/div[2]/a'.</msg>
+<arg>xpath://*[@id="current"]/div/div[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:19:40.158776" elapsed="1.360246"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0116</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:19:41.519237" elapsed="1.359959"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:19:42.879577" level="INFO">Typing text '67023086@up.ac.th' into text field 'id:i0116'.</msg>
+<arg>id:i0116</arg>
+<arg>${VALID USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:19:42.879364" elapsed="0.163073"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:19:43.042781" level="INFO">Clicking button 'id:idSIButton9'.</msg>
+<arg>id:idSIButton9</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:19:43.042614" elapsed="0.092663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:i0118</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:19:43.135435" elapsed="1.324235"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:19:44.460072" level="INFO">Typing text 'Aman0945785806*' into text field 'id:i0118'.</msg>
+<arg>id:i0118</arg>
+<arg>${VALID PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:19:44.459844" elapsed="0.042010"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:19:45.505689" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:19:44.502032" elapsed="1.004221"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:19:45.507591" level="INFO">Executing JavaScript:
+document.querySelector('#idSIButton9').click()
+Without any arguments.</msg>
+<arg>document.querySelector('#idSIButton9').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T22:19:45.506728" elapsed="0.266314"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>อนุมัติ</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-12T22:19:45.773389" elapsed="2.086544"/>
+</kw>
+<kw name="Pause Execution" owner="Dialogs">
+<arg>กรุณายืนยัน MFA ในมือถือให้เรียบร้อย แล้วค่อยกลับมากด OK ตรงนี้</arg>
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" start="2026-02-12T22:19:47.860132" elapsed="15.600019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_STAY_SIGNED_IN}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:03.461400" elapsed="1.303443"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:04.765607" level="INFO">Clicking element 'id:idSIButton9'.</msg>
+<arg>${BTN_STAY_SIGNED_IN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:04.765149" elapsed="1.251020"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>${SERVER}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-02-12T22:20:06.016373" elapsed="0.252300"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:20:08.269839" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:20:06.268868" elapsed="2.001436"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ENTER_REG}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:08.273240" elapsed="12.514461"/>
+</kw>
+<msg time="2026-02-12T22:20:20.787922" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${BTN_ENTER_REG}</arg>
+<arg>15s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:08.271209" elapsed="12.516741"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:20.790999" level="INFO">Executing JavaScript:
+document.evaluate("//a[contains(text(), 'เข้าสู่ระบบระบบบริการการศึกษา')] | /html/body/header/div[1]/div[2]/div[3]/div/div/div/div[2]/a[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+Without any arguments.</msg>
+<arg>document.evaluate("${BTN_ENTER_REG.replace('xpath:', '')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T22:20:20.788997" elapsed="0.472302"/>
+</kw>
+<status status="PASS" start="2026-02-12T22:20:20.788771" elapsed="0.472618"/>
+</branch>
+<branch type="ELSE">
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>https://${SERVER}/app/main</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-12T22:20:21.261628" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2026-02-12T22:20:21.261470" elapsed="0.000215"/>
+</branch>
+<status status="PASS" start="2026-02-12T22:20:20.788053" elapsed="0.474346"/>
+</if>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>/Users/mac/Documents/GitHub/testing_Q2/results/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2026-02-12T22:20:21.262497" elapsed="0.000243"/>
+</kw>
+<status status="PASS" start="2026-02-12T22:19:35.922246" elapsed="45.340588"/>
+</kw>
+<test id="s1-t1" name="TC-01: Maximum GPA (All A)" line="95">
+<kw name="Navigate To Grade Calculation" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:21.264500" level="INFO">Opening url 'https://reg.up.ac.th/app/main'</msg>
+<arg>https://${SERVER}/app/main</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T22:20:21.264387" elapsed="0.389034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:21.653819" elapsed="0.014115"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:21.668318" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:21.668100" elapsed="0.054594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:21.722846" elapsed="0.017855"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:21.741006" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:21.740846" elapsed="0.080944"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="1"]/td[6]/select</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:21.821953" elapsed="0.435872"/>
+</kw>
+<status status="PASS" start="2026-02-12T22:20:21.264158" elapsed="0.993766"/>
+</kw>
+<kw name="Input Multiple Grades">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.258695" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.258476" elapsed="0.000243"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.269570" level="INFO">Element 'xpath://*[@id="1"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.259897" elapsed="0.009754"/>
+</kw>
+<msg time="2026-02-12T22:20:22.269762" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.259029" elapsed="0.010753"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.269889" elapsed="0.000340"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.270477" level="INFO">Selecting options from selection list 'xpath://*[@id="1"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.270319" elapsed="0.027038"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.297888" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.297526" elapsed="0.000387"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:22.258945" elapsed="0.039005"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.310531" level="INFO">Element 'xpath://*[@id="2"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.298320" elapsed="0.012292"/>
+</kw>
+<msg time="2026-02-12T22:20:22.310720" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.298132" elapsed="0.012607"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.310876" elapsed="0.000338"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.311469" level="INFO">Selecting options from selection list 'xpath://*[@id="2"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.311300" elapsed="0.022983"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.334740" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.334429" elapsed="0.000335"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:22.298056" elapsed="0.036743"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.348190" level="INFO">Element 'xpath://*[@id="3"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.335149" elapsed="0.013115"/>
+</kw>
+<msg time="2026-02-12T22:20:22.348365" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.334968" elapsed="0.013415"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.348482" elapsed="0.000302"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.349035" level="INFO">Selecting options from selection list 'xpath://*[@id="3"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.348876" elapsed="0.021974"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.371374" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.371063" elapsed="0.000334"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:22.334896" elapsed="0.036536"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.383631" level="INFO">Element 'xpath://*[@id="4"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.371772" elapsed="0.011918"/>
+</kw>
+<msg time="2026-02-12T22:20:22.383778" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.371597" elapsed="0.012198"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.383884" elapsed="0.000272"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.384390" level="INFO">Selecting options from selection list 'xpath://*[@id="4"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.384235" elapsed="0.020864"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.405505" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.405225" elapsed="0.000304"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:22.371525" elapsed="0.034039"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.417589" level="INFO">Element 'xpath://*[@id="5"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.405899" elapsed="0.011759"/>
+</kw>
+<msg time="2026-02-12T22:20:22.417753" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.405724" elapsed="0.012046"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.417865" elapsed="0.000286"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.418387" level="INFO">Selecting options from selection list 'xpath://*[@id="5"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.418229" elapsed="0.020653"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.439303" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.439009" elapsed="0.000317"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:22.405655" elapsed="0.033705"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.451798" level="INFO">Element 'xpath://*[@id="6"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.439706" elapsed="0.012168"/>
+</kw>
+<msg time="2026-02-12T22:20:22.451985" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.439524" elapsed="0.012483"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.452103" elapsed="0.000276"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.452620" level="INFO">Selecting options from selection list 'xpath://*[@id="6"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.452457" elapsed="0.021534"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.474439" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.474126" elapsed="0.000336"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:22.439452" elapsed="0.035045"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.486872" level="INFO">Element 'xpath://*[@id="7"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.474837" elapsed="0.012097"/>
+</kw>
+<msg time="2026-02-12T22:20:22.487026" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.474659" elapsed="0.012384"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.487136" elapsed="0.000301"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:22.487672" level="INFO">Selecting options from selection list 'xpath://*[@id="7"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.487515" elapsed="0.021599"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:22.509539" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.509252" elapsed="0.000311"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:22.474590" elapsed="0.035008"/>
+</iter>
+<var>${grade}</var>
+<value>@{grades}</value>
+<status status="PASS" start="2026-02-12T22:20:22.258789" elapsed="0.250850"/>
+</for>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BTN_CALCULATE}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.509807" elapsed="0.279174"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:20:23.791323" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:20:22.789553" elapsed="1.002141"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:23.794572" level="INFO">Executing JavaScript:
+document.evaluate("//span[contains(text(), 'คำนวณเกรด')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+Without any arguments.</msg>
+<arg>document.evaluate("${BTN_CALCULATE.replace('xpath:', '')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T22:20:23.792226" elapsed="0.013610"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:20:25.807705" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:20:23.806080" elapsed="2.002059"/>
+</kw>
+<arg>A</arg>
+<arg>A</arg>
+<arg>A</arg>
+<arg>A</arg>
+<arg>A</arg>
+<arg>A</arg>
+<arg>A</arg>
+<status status="PASS" start="2026-02-12T22:20:22.258215" elapsed="3.550319"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>4.00</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-12T22:20:25.809273" elapsed="0.021223"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.035918" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/all-a.png"&gt;&lt;img src="screenshots/all-a.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>all-a.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-12T22:20:25.830790" elapsed="0.205221"/>
+</kw>
+<doc>ตรวจสอบกรณีได้เกรด A ทุกวิชา GPA ต้องเป็น 4.00</doc>
+<status status="PASS" start="2026-02-12T22:20:21.262941" elapsed="4.773232"/>
+</test>
+<test id="s1-t2" name="TC-02: Mixed Grades (A, B, C)" line="101">
+<kw name="Navigate To Grade Calculation" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.037544" level="INFO">Opening url 'https://reg.up.ac.th/app/main'</msg>
+<arg>https://${SERVER}/app/main</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.037444" elapsed="0.095499"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.133089" elapsed="0.011329"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.144710" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.144561" elapsed="0.051380"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.196114" elapsed="0.017614"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.214098" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.213898" elapsed="0.040640"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="1"]/td[6]/select</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.254699" elapsed="0.217878"/>
+</kw>
+<status status="PASS" start="2026-02-12T22:20:26.037277" elapsed="0.435395"/>
+</kw>
+<kw name="Input Multiple Grades">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.473323" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.473116" elapsed="0.000236"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.483742" level="INFO">Element 'xpath://*[@id="1"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.473793" elapsed="0.010044"/>
+</kw>
+<msg time="2026-02-12T22:20:26.483956" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.473601" elapsed="0.010374"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.484179" elapsed="0.000398"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.484861" level="INFO">Selecting options from selection list 'xpath://*[@id="1"]/td[6]/select' by value A.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.484683" elapsed="0.021859"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.506997" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.506682" elapsed="0.000341"/>
+</kw>
+<var name="${grade}">A</var>
+<status status="PASS" start="2026-02-12T22:20:26.473524" elapsed="0.033534"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.516885" level="INFO">Element 'xpath://*[@id="2"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.507400" elapsed="0.009560"/>
+</kw>
+<msg time="2026-02-12T22:20:26.517072" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.507222" elapsed="0.009869"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.517204" elapsed="0.000350"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.517819" level="INFO">Selecting options from selection list 'xpath://*[@id="2"]/td[6]/select' by value B+.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.517647" elapsed="0.048131"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.566328" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.566002" elapsed="0.000351"/>
+</kw>
+<var name="${grade}">B+</var>
+<status status="PASS" start="2026-02-12T22:20:26.507151" elapsed="0.059239"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.602117" level="INFO">Element 'xpath://*[@id="3"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.566741" elapsed="0.035458"/>
+</kw>
+<msg time="2026-02-12T22:20:26.602312" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.566555" elapsed="0.035776"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.602436" elapsed="0.000319"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.603002" level="INFO">Selecting options from selection list 'xpath://*[@id="3"]/td[6]/select' by value B.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.602840" elapsed="0.044000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.647301" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.646982" elapsed="0.000344"/>
+</kw>
+<var name="${grade}">B</var>
+<status status="PASS" start="2026-02-12T22:20:26.566483" elapsed="0.080878"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.657770" level="INFO">Element 'xpath://*[@id="4"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.647717" elapsed="0.010129"/>
+</kw>
+<msg time="2026-02-12T22:20:26.657951" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.647533" elapsed="0.010436"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.658072" elapsed="0.000313"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.658632" level="INFO">Selecting options from selection list 'xpath://*[@id="4"]/td[6]/select' by value C+.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.658467" elapsed="0.039199"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.698122" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.697811" elapsed="0.000334"/>
+</kw>
+<var name="${grade}">C+</var>
+<status status="PASS" start="2026-02-12T22:20:26.647458" elapsed="0.050721"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.709391" level="INFO">Element 'xpath://*[@id="5"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.698519" elapsed="0.010957"/>
+</kw>
+<msg time="2026-02-12T22:20:26.709591" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.698340" elapsed="0.011270"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.709719" elapsed="0.000341"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.710310" level="INFO">Selecting options from selection list 'xpath://*[@id="5"]/td[6]/select' by value C.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.710145" elapsed="0.040645"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.751257" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.750938" elapsed="0.000345"/>
+</kw>
+<var name="${grade}">C</var>
+<status status="PASS" start="2026-02-12T22:20:26.698270" elapsed="0.053048"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.761190" level="INFO">Element 'xpath://*[@id="6"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.751667" elapsed="0.009598"/>
+</kw>
+<msg time="2026-02-12T22:20:26.761368" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.751485" elapsed="0.009900"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.761483" elapsed="0.000297"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.762014" level="INFO">Selecting options from selection list 'xpath://*[@id="6"]/td[6]/select' by value D+.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.761860" elapsed="0.039912"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.802222" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.801913" elapsed="0.000332"/>
+</kw>
+<var name="${grade}">D+</var>
+<status status="PASS" start="2026-02-12T22:20:26.751413" elapsed="0.050867"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.812552" level="INFO">Element 'xpath://*[@id="7"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.803506" elapsed="0.009111"/>
+</kw>
+<msg time="2026-02-12T22:20:26.812712" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.803278" elapsed="0.009452"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.812826" elapsed="0.000314"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:26.813392" level="INFO">Selecting options from selection list 'xpath://*[@id="7"]/td[6]/select' by value D.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.813220" elapsed="0.039760"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:26.853489" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.853140" elapsed="0.000373"/>
+</kw>
+<var name="${grade}">D</var>
+<status status="PASS" start="2026-02-12T22:20:26.803183" elapsed="0.050367"/>
+</iter>
+<var>${grade}</var>
+<value>@{grades}</value>
+<status status="PASS" start="2026-02-12T22:20:26.473405" elapsed="0.380205"/>
+</for>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BTN_CALCULATE}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-12T22:20:26.853708" elapsed="0.268783"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:20:28.123701" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:20:27.122688" elapsed="1.001457"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:28.127233" level="INFO">Executing JavaScript:
+document.evaluate("//span[contains(text(), 'คำนวณเกรด')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+Without any arguments.</msg>
+<arg>document.evaluate("${BTN_CALCULATE.replace('xpath:', '')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T22:20:28.124809" elapsed="0.013354"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:20:30.139541" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:20:28.138413" elapsed="2.001505"/>
+</kw>
+<arg>A</arg>
+<arg>B+</arg>
+<arg>B</arg>
+<arg>C+</arg>
+<arg>C</arg>
+<arg>D+</arg>
+<arg>D</arg>
+<status status="PASS" start="2026-02-12T22:20:26.472892" elapsed="3.667285"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.341256" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/mixed-grades.png"&gt;&lt;img src="screenshots/mixed-grades.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>mixed-grades.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.140873" elapsed="0.200472"/>
+</kw>
+<doc>ทดสอบเกรดคละกันเพื่อดูการคำนวณค่าเฉลี่ย</doc>
+<status status="PASS" start="2026-02-12T22:20:26.036361" elapsed="4.305130"/>
+</test>
+<test id="s1-t3" name="TC-03: Minimum GPA (All F)" line="107">
+<kw name="Navigate To Grade Calculation" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.343104" level="INFO">Opening url 'https://reg.up.ac.th/app/main'</msg>
+<arg>https://${SERVER}/app/main</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.343003" elapsed="0.113519"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.456680" elapsed="0.019385"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.476355" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.476206" elapsed="0.048965"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.525374" elapsed="0.022259"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.547956" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.547792" elapsed="0.040870"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="1"]/td[6]/select</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.588808" elapsed="0.216374"/>
+</kw>
+<status status="PASS" start="2026-02-12T22:20:30.342392" elapsed="0.462885"/>
+</kw>
+<kw name="Input Multiple Grades">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-12T22:20:30.805914" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.805710" elapsed="0.000227"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.815899" level="INFO">Element 'xpath://*[@id="1"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.806340" elapsed="0.009637"/>
+</kw>
+<msg time="2026-02-12T22:20:30.816086" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.806164" elapsed="0.009940"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.816207" elapsed="0.000306"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.816751" level="INFO">Selecting options from selection list 'xpath://*[@id="1"]/td[6]/select' by value F.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.816593" elapsed="0.041236"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:30.858400" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.858065" elapsed="0.000360"/>
+</kw>
+<var name="${grade}">F</var>
+<status status="PASS" start="2026-02-12T22:20:30.806096" elapsed="0.052366"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.875305" level="INFO">Element 'xpath://*[@id="2"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.858812" elapsed="0.016578"/>
+</kw>
+<msg time="2026-02-12T22:20:30.875505" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.858627" elapsed="0.016897"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.875632" elapsed="0.000335"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.876218" level="INFO">Selecting options from selection list 'xpath://*[@id="2"]/td[6]/select' by value F.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.876053" elapsed="0.059493"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:30.936020" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.935695" elapsed="0.000349"/>
+</kw>
+<var name="${grade}">F</var>
+<status status="PASS" start="2026-02-12T22:20:30.858555" elapsed="0.077526"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.946080" level="INFO">Element 'xpath://*[@id="3"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.936428" elapsed="0.009726"/>
+</kw>
+<msg time="2026-02-12T22:20:30.946254" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.936247" elapsed="0.010027"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.946364" elapsed="0.000277"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.946875" level="INFO">Selecting options from selection list 'xpath://*[@id="3"]/td[6]/select' by value F.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.946722" elapsed="0.038848"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:30.986053" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.985721" elapsed="0.000358"/>
+</kw>
+<var name="${grade}">F</var>
+<status status="PASS" start="2026-02-12T22:20:30.936174" elapsed="0.049941"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.995886" level="INFO">Element 'xpath://*[@id="4"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.986476" elapsed="0.009483"/>
+</kw>
+<msg time="2026-02-12T22:20:30.996060" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.986287" elapsed="0.009791"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.996174" elapsed="0.000300"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:30.996712" level="INFO">Selecting options from selection list 'xpath://*[@id="4"]/td[6]/select' by value F.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:30.996556" elapsed="0.038718"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:31.035787" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.035435" elapsed="0.000377"/>
+</kw>
+<var name="${grade}">F</var>
+<status status="PASS" start="2026-02-12T22:20:30.986212" elapsed="0.049638"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:31.046974" level="INFO">Element 'xpath://*[@id="5"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.036218" elapsed="0.010839"/>
+</kw>
+<msg time="2026-02-12T22:20:31.047175" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.036026" elapsed="0.011169"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.047303" elapsed="0.000332"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:31.047887" level="INFO">Selecting options from selection list 'xpath://*[@id="5"]/td[6]/select' by value F.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.047723" elapsed="0.040018"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:31.088255" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.087909" elapsed="0.000373"/>
+</kw>
+<var name="${grade}">F</var>
+<status status="PASS" start="2026-02-12T22:20:31.035951" elapsed="0.052368"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:31.098623" level="INFO">Element 'xpath://*[@id="6"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.088785" elapsed="0.009907"/>
+</kw>
+<msg time="2026-02-12T22:20:31.098793" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.088493" elapsed="0.010319"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.098911" elapsed="0.000309"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:31.099470" level="INFO">Selecting options from selection list 'xpath://*[@id="6"]/td[6]/select' by value F.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.099307" elapsed="0.039498"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:31.139284" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.138954" elapsed="0.000354"/>
+</kw>
+<var name="${grade}">F</var>
+<status status="PASS" start="2026-02-12T22:20:31.088417" elapsed="0.050928"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:31.148839" level="INFO">Element 'xpath://*[@id="7"]/td[6]/select' is displayed.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.139706" elapsed="0.009202"/>
+</kw>
+<msg time="2026-02-12T22:20:31.149006" level="INFO">${row_status} = True</msg>
+<var>${row_status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.139517" elapsed="0.009507"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>'${row_status}' == 'False'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.149115" elapsed="0.000287"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:31.149634" level="INFO">Selecting options from selection list 'xpath://*[@id="7"]/td[6]/select' by value F.</msg>
+<arg>xpath://*[@id="${index}"]/td[6]/select</arg>
+<arg>${grade}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.149482" elapsed="0.037347"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-12T22:20:31.187295" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.186986" elapsed="0.000331"/>
+</kw>
+<var name="${grade}">F</var>
+<status status="PASS" start="2026-02-12T22:20:31.139444" elapsed="0.047909"/>
+</iter>
+<var>${grade}</var>
+<value>@{grades}</value>
+<status status="PASS" start="2026-02-12T22:20:30.805986" elapsed="0.381408"/>
+</for>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BTN_CALCULATE}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.187495" elapsed="0.275259"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:20:32.463898" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:20:31.462966" elapsed="1.001139"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:32.465442" level="INFO">Executing JavaScript:
+document.evaluate("//span[contains(text(), 'คำนวณเกรด')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+Without any arguments.</msg>
+<arg>document.evaluate("${BTN_CALCULATE.replace('xpath:', '')}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-02-12T22:20:32.464366" elapsed="0.009465"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T22:20:34.474671" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T22:20:32.474039" elapsed="2.001109"/>
+</kw>
+<arg>F</arg>
+<arg>F</arg>
+<arg>F</arg>
+<arg>F</arg>
+<arg>F</arg>
+<arg>F</arg>
+<arg>F</arg>
+<status status="PASS" start="2026-02-12T22:20:30.805492" elapsed="3.670018"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>0.00</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.476192" elapsed="0.022395"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:34.685922" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/all-f.png"&gt;&lt;img src="screenshots/all-f.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>all-f.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.498884" elapsed="0.187122"/>
+</kw>
+<doc>ตรวจสอบกรณีติด F ทุกวิชา GPA ต้องเป็น 0.00</doc>
+<status status="PASS" start="2026-02-12T22:20:30.341667" elapsed="4.344477"/>
+</test>
+<test id="s1-t4" name="TC-04: Verify Information Matching" line="113">
+<kw name="Navigate To Grade Calculation" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:34.687617" level="INFO">Opening url 'https://reg.up.ac.th/app/main'</msg>
+<arg>https://${SERVER}/app/main</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.687516" elapsed="0.119020"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.806689" elapsed="0.019908"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:34.826974" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.826760" elapsed="0.044937"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.871862" elapsed="0.055998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:34.928174" level="INFO">Clicking element 'xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b'.</msg>
+<arg>xpath://*[@id="box-topmenu"]/ul/li[4]/ul/li[3]/a/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.928010" elapsed="0.039405"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="1"]/td[6]/select</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T22:20:34.967581" elapsed="0.217089"/>
+</kw>
+<status status="PASS" start="2026-02-12T22:20:34.687348" elapsed="0.497422"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-12T22:20:35.196003" level="INFO">Current page contains text '67023086'.</msg>
+<arg>67023086</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-12T22:20:35.184937" elapsed="0.011145"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Student ID Verified.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-12T22:20:35.196265" elapsed="0.000237"/>
+</kw>
+<doc>เช็คว่ารหัสนิสิตที่แสดงในหน้าคำนวณตรงกับ Login หรือไม่</doc>
+<status status="PASS" start="2026-02-12T22:20:34.686305" elapsed="0.510307"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-12T22:20:35.197108" elapsed="0.131795"/>
+</kw>
+<status status="PASS" start="2026-02-12T22:19:35.699311" elapsed="59.629706"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Gpa Test" id="s1" pass="4" fail="0" skip="0">Gpa Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
